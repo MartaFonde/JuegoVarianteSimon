@@ -60,6 +60,7 @@ namespace Componente_FormaColor
                         {
                             label1.Visible = true;
                             this.Size = new Size(label1.Width, label1.Height);
+                            label1.Location = new Point(0, 0);
                         }                        
                     }
                     else if (forma == eForma.Elipse || forma == eForma.Rectangulo)
@@ -94,9 +95,6 @@ namespace Componente_FormaColor
                     break;
                 case eForma.Rectangulo:
                     e.Graphics.FillRectangle(b, 0, 0, this.Width, this.Height);
-                    break;
-                case eForma.Texto:
-                    e.Graphics.DrawString(Texto, this.Font, b, new Point(0, 0));
                     break;
             }
 
